@@ -4,11 +4,14 @@ import LoginScreen from './screens/LoginScreen';
 import {FirstAppDrawerNavigator} from './components/FirstAppDrawerNavigator';
 import {SecondAppDrawerNavigator} from './components/SecondAppDrawerNavigator';
 import {SecondAppTabNavigator} from './components/SecondAppTabNavigator';
+import {SafeAreaProvider} from 'react-native-safe-area-context'
 
 export default class App extends React.Component {
   render() {
     return (
-      <AppContainer />
+      <SafeAreaProvider>
+        <AppContainer />
+      </SafeAreaProvider>
     );
   }
 }
